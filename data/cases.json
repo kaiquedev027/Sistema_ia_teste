@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Atendimento com LLM reduz 60% do TMA",
+    "client": "E-commerce TechStore",
+    "problem": "Suporte sobrecarregado, respostas repetitivas e tempo médio de atendimento alto.",
+    "solution": "Chatbot com RAG, integrado ao Zendesk e base interna de conhecimento.",
+    "impact": ["-60% TMA", "-35% chamados humanos", "+24/7 cobertura"],
+    "stack": ["LLM", "Embeddings", "Zapier", "Zendesk API"],
+    "link": "#contact",
+    "category": "Atendimento",
+    "duration": "6 semanas"
+  },
+  {
+    "title": "OCR + Classificação de NFs automatiza 70% do processo",
+    "client": "Indústria MetalTech",
+    "problem": "Digitação manual de campos fiscais, erros frequentes e lentidão no processamento.",
+    "solution": "OCR + validação automática e roteamento inteligente por tipo de documento.",
+    "impact": ["-70% tempo de processamento", "-90% erros de digitação", "ROI em 3 meses"],
+    "stack": ["OCR", "Computer Vision", "Python API", "SQL"],
+    "link": "#contact",
+    "category": "Automação",
+    "duration": "4 semanas"
+  },
+  {
+    "title": "Previsão de demanda reduz estoque em 25%",
+    "client": "Varejo FashionPlus",
+    "problem": "Excesso de estoque sazonal e falta de produtos em alta demanda.",
+    "solution": "Modelo de ML para previsão de vendas com dados históricos e tendências.",
+    "impact": ["-25% estoque parado", "+15% vendas", "Previsão 85% acurada"],
+    "stack": ["Python", "Scikit-learn", "Time Series", "Dashboard"],
+    "link": "#contact",
+    "category": "Previsão",
+    "duration": "8 semanas"
+  },
+  {
+    "title": "Análise de sentimento em redes sociais",
+    "client": "Agência SocialBrand",
+    "problem": "Monitoramento manual de menções e sentimentos sobre marcas clientes.",
+    "solution": "Sistema automatizado de coleta e análise de sentimento em tempo real.",
+    "impact": ["+300% menções monitoradas", "Alertas em tempo real", "Relatórios automáticos"],
+    "stack": ["NLP", "Twitter API", "Sentiment Analysis", "Dashboard"],
+    "link": "#contact",
+    "category": "Análise",
+    "duration": "5 semanas"
+  }
+]

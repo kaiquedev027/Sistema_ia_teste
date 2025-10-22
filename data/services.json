@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "llms-chatbots",
+    "title": "LLMs & Chatbots",
+    "desc": "Atendimento 24/7, triagem e geração de respostas em contexto (RAG).",
+    "highlights": ["RAG/embeddings", "Conexão a bases internas", "Guardrails de segurança"],
+    "icon": "bot",
+    "color": "bg-blue-500"
+  },
+  {
+    "slug": "automacoes-ia",
+    "title": "Automações com IA",
+    "desc": "Bots que leem, resumem, classificam e disparam fluxos (e-mail, planilhas, CRM).",
+    "highlights": ["OCR + classificação", "Integrações (Zapier/n8n)", "Observabilidade"],
+    "icon": "zap",
+    "color": "bg-purple-500"
+  },
+  {
+    "slug": "visao-computacional",
+    "title": "Visão Computacional",
+    "desc": "Detecção de objetos, leitura de notas fiscais, inspeção de qualidade.",
+    "highlights": ["OCR/Document AI", "Detecção em tempo real", "Métricas de acurácia"],
+    "icon": "eye",
+    "color": "bg-green-500"
+  },
+  {
+    "slug": "previsoes-ml",
+    "title": "Previsões (ML/Forecast)",
+    "desc": "Modelos para demanda, churn e séries temporais.",
+    "highlights": ["Feature store", "Backtesting", "Explicabilidade"],
+    "icon": "trending-up",
+    "color": "bg-orange-500"
+  }
+]

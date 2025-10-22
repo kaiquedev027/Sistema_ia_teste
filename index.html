@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA & Automação - Soluções Inteligentes para seu Negócio | Chatbots, OCR, ML</title>
+    <meta name="description" content="Especialistas em IA e automação de processos. Chatbots com RAG, OCR inteligente, previsões ML e visão computacional. ROI garantido em até 3 meses. Diagnóstico gratuito.">
+    <meta name="keywords" content="inteligência artificial, automação de processos, chatbot, OCR, machine learning, visão computacional, RAG, LLM, IA empresarial, automação, diagnóstico gratuito">
+    <meta name="author" content="IA & Automação">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://iaautomacao.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iaautomacao.com/">
+    <meta property="og:title" content="IA & Automação - Soluções Inteligentes para seu Negócio">
+    <meta property="og:description" content="Transforme seus processos com IA. Chatbots inteligentes, automação OCR, previsões ML e mais. ROI garantido em até 3 meses. Diagnóstico gratuito.">
+    <meta property="og:image" content="https://iaautomacao.com/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="IA & Automação">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://iaautomacao.com/">
+    <meta property="twitter:title" content="IA & Automação - Soluções Inteligentes para seu Negócio">
+    <meta property="twitter:description" content="Transforme seus processos com IA. Chatbots inteligentes, automação OCR, previsões ML e mais. ROI garantido em até 3 meses.">
+    <meta property="twitter:image" content="https://iaautomacao.com/assets/og-image.jpg">
+    <meta property="twitter:creator" content="@iaautomacao">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "IA & Automação",
+        "url": "https://iaautomacao.com",
+        "logo": "https://iaautomacao.com/assets/logo.png",
+        "description": "Especialistas em Inteligência Artificial e automação de processos empresariais",
+        "email": "contato@iaautomacao.com",
+        "sameAs": [
+            "https://linkedin.com/company/iaautomacao",
+            "https://github.com/iaautomacao"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-11-99999-9999",
+            "contactType": "customer service",
+            "email": "contato@iaautomacao.com",
+            "availableLanguage": "Portuguese"
+        },
+        "offers": {
+            "@type": "Offer",
+            "name": "Diagnóstico Gratuito de IA",
+            "description": "Análise gratuita de processos para identificar oportunidades de automação com IA",
+            "price": "0",
+            "priceCurrency": "BRL"
+        }
+    }
+    </script>
+
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'infinite-scroll': 'infinite-scroll 25s linear infinite',
+          },
+          keyframes: {
+            'infinite-scroll': {
+              from: { transform: 'translateX(0)' },
+              to: { transform: 'translateX(-100%)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+
+    <!-- Performance and Analytics -->
+    <meta name="theme-color" content="#f97316">
+    <meta name="msapplication-TileColor" content="#f97316">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body class="bg-[#0e0918] text-black font-sans antialiased">
+    <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 py-2 sm:py-3 md:py-4 transition-all duration-300 bg-gradient-to-r from-[#010102] to-transparent">
+        <div class="container flex items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <a href="#" class="flex items-center space-x-2" id="logo-link" aria-label="IA & Automação">
+                <img class="logo" src="./assets/logo.png" alt="IA & Automação Logo" class="h-7 sm:h-8">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8 ">
+                <a href="#" class="nav-link text-white" id="nav-inicio">Home</a>
+                <a href="#services" class="nav-link text-white">Serviços</a>
+                <a href="#cases" class="nav-link text-white">Casos</a>
+                <a href="#about" class="nav-link text-white">Sobre</a>
+                <a href="#contact" class="nav-link text-white">Contato</a>
+            </nav>
+
+            <!-- CTA Button Desktop -->
+            <a href="#contact" class="hidden md:flex items-center justify-center bg-gradient-to-r from-[#fe681b] to-[#ff1703] text-white font-medium py-2 px-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]">
+                Solicitar Diagnóstico
+            </a>
+
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-gray-700 p-3 focus:outline-none" id="mobile-menu-btn" aria-label="Open menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="fixed inset-0 z-40 bg-white flex flex-col pt-16 px-6 md:hidden transition-all duration-300 ease-in-out opacity-0 translate-x-full pointer-events-none">
+            <nav class="flex flex-col space-y-6 items-center mt-8">
+                <a href="#" class="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 mobile-nav-link">Home</a>
+                <a href="#services" class="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 mobile-nav-link">Serviços</a>
+                <a href="#cases" class="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 mobile-nav-link">Casos</a>
+                <a href="#about" class="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 mobile-nav-link">Sobre</a>
+                <a href="#contact" class="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 mobile-nav-link">Contato</a>
+                
+                <!-- CTA Mobile -->
+                <a href="#contact" class="bg-[#fc8f26] hover:bg-orange-600 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg mobile-nav-link">
+                    Solicitar Diagnóstico
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="space-y-4 sm:space-y-8">
+        <!-- Hero Section -->
+        <section id="hero" class="overflow-hidden relative bg-cover" style="background-image: url('./assets/Header.png'); background-position: center 30%; padding: 100px 12px 40px;">
+            <div class="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-gradient-to-br from-orange-400 to-red-500 opacity-20 blur-3xl rounded-full"></div>
+            
+            <div class="container px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="hero-container">
+                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+                    <div class="w-full lg:w-1/2">
+                        <h1 class="section-title text-3xl text-white sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" style="animation-delay: 0.3s;">
+                            IA que resolve,<br class="hidden sm:inline">sem firula
+                        </h1>
+                        
+                        <p class="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-white font-normal text-base sm:text-lg text-left" style="animation-delay: 0.5s;">
+                            Da ideia ao deploy: chatbots, automações e modelos de previsão sob medida.
+                        </p>
+
+                        <!-- Pain Points -->
+                        <div class="space-y-3 mb-6 sm:mb-8 opacity-0 animate-fade-in" style="animation-delay: 0.6s;">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                                <p class="text-sm sm:text-base text-white"><strong>Demora manual?</strong> → RPA + LLM para triagem e respostas.</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                                <p class="text-sm sm:text-base text-white"><strong>Dados dispersos?</strong> → pipelines + embeddings para busca semântica.</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                                <p class="text-sm sm:text-base text-white"><strong>Demandas sazonais?</strong> → modelos de forecast para estoque e suporte.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in" style="animation-delay: 0.8s;">
+                            <a href="#contact" class="flex items-center justify-center group w-full sm:w-auto text-center bg-gradient-to-r from-[#fe681b] to-[#ff1703] text-white font-medium py-4 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]">
+                                Solicitar Diagnóstico
+                                <i data-lucide="arrow-right" class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                            <a href="#services" class="flex items-center justify-center group w-full sm:w-auto text-center bg-gradient-to-r from-[#fe681b] to-[#ff1703] text-white font-medium py-4 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]">
+                                Ver Serviços
+                                <i data-lucide="chevron-down" class="ml-2 w-4 h-4 transition-transform group-hover:translate-y-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full lg:w-1/2 relative mt-6 lg:mt-0">
+                        <div id="lottie-container" class="relative z-10 animate-fade-in" style="animation-delay: 0.9s;">
+                            <!-- Lottie animation will be loaded here -->
+                        </div>
+                        
+                        <div id="fallback-image" class="hidden">
+                            <div class="absolute inset-0 bg-gray-900 rounded-2xl sm:rounded-3xl -z-10 shadow-xl"></div>
+                            <div class="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
+                                <img id="hero-image" src="./assets/roboia2.gif" alt="Atlas Robot" class="w-full h-auto object-cover transition-transform duration-500 ease-out" style="transform-style: preserve-3d;">
+                                <div class="absolute inset-0" style="background-image: url('./assets/roboia2.gif'); background-size: cover; background-position: center; mix-blend-mode: overlay; opacity: 0.5;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hidden lg:block absolute bottom-0 left-1/4 w-64 h-64 bg-orange-100/30 rounded-full blur-3xl -z-10 parallax" data-speed="0.05"></div>
+        </section>
+
+        <!-- Logos Section -->
+  <section id="logos" class="py-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-white mb-8">Confiado por empresas de diversos setores</p>
+
+      <!-- Carrossel de Logos com animação -->
+      <div
+        x-data="{}"
+        x-init="$nextTick(() => {
+          let ul = $refs.logos;
+          ul.insertAdjacentHTML('afterend', ul.outerHTML);
+          ul.nextSibling.setAttribute('aria-hidden', 'true');
+        })"
+        class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+      >
+        <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+          <li>
+            <div class="group w-24 h-12 bg-transparent rounded flex items-center justify-center">
+              <img src="/assets/Google.png" alt="Google" class="h-8" />
+            </div>
+          </li>
+          <li>
+            <div class="group w-24 h-12 bg-transparent rounded flex items-center justify-center">
+              <img src="/assets/loggi.png" alt="Loggi" class="h-8" />
+            </div>
+          </li>
+          <li>
+            <div class="group w-24 h-12 bg-transparent rounded flex items-center justify-center">
+              <img src="/assets/olx.png" alt="OLX" class="h-8" />
+            </div>
+          </li>
+          <li>
+            <div class="group w-24 h-12 bg-transparent rounded flex items-center justify-center">
+              <img src="/assets/ibm-logo.png" alt="IBM" class="h-8" />
+            </div>
+          </li>
+          <li>
+            <div class="group w-24 h-12 bg-transparent rounded flex items-center justify-center">
+              <img src="/assets/nubank.png" alt="Nubank" class="h-8" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 lg:py-24 ">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl text-[#fe681b] md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                        Nossos Serviços
+                    </h2>
+                    <p class="section-subtitle text-lg md:text-xl text-white max-w-3xl mx-auto">
+                        Soluções completas de IA e automação para transformar seus processos e reduzir custos operacionais.
+                    </p>
+                </div>
+
+                <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- Services will be loaded here by JavaScript -->
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="inline-flex items-center justify-center bg-gradient-to-r from-[#fe681b] to-[#ff1703] text-white font-medium py-4 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]">
+                        Quero Diagnóstico
+                        <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cases Section -->
+        <section id="cases" class="py-16 lg:py-24 bg-[#0e0918]">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl text-[#fe681b] md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                        Casos de Sucesso
+                    </h2>
+                    <p class="section-subtitle text-lg md:text-xl text-white max-w-3xl mx-auto">
+                        Resultados reais de projetos que transformaram processos e geraram impacto mensurável.
+                    </p>
+                </div>
+
+                <div id="cases-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Cases will be loaded here by JavaScript -->
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="inline-flex items-center justify-center bg-gradient-to-r from-[#fe681b] to-[#ff1703] text-white font-medium py-4 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]">
+                        Ver Mais Casos
+                        <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-16 lg:py-24">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl text-[#fe681b] md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                        Nosso Processo
+                    </h2>
+                    <p class="section-subtitle text-lg md:text-xl text-white max-w-3xl mx-auto">
+                        Uma metodologia testada para garantir resultados rápidos e sustentáveis em projetos de IA.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <!-- Step 1 -->
+                    <div class="group text-center">
+                        <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="search" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#fc8f26] mb-3">1. Descoberta</h3>
+                        <p class="text-sm text-white mb-4">Mapeamos dores e dados disponíveis para identificar oportunidades de automação.</p>
+                        <div class="text-xs text-orange-600 bg-orange-50 px-3 py-2 rounded-full">
+                            <strong>Risco:</strong> Baixo | <strong>Duração:</strong> 1 semana
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="group text-center">
+                        <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="clipboard-check" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#fc8f26] mb-3">2. Diagnóstico</h3>
+                        <p class="text-sm text-white mb-4">Análise técnica detalhada e definição da arquitetura da solução.</p>
+                        <div class="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-full">
+                            <strong>Risco:</strong> Baixo | <strong>Duração:</strong> 1 semana
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="group text-center">
+                        <div class="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="flask-conical" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#fc8f26] mb-3">3. PoC</h3>
+                        <p class="text-sm text-white mb-4">Prova de conceito em 2-3 semanas para medir impacto real.</p>
+                        <div class="text-xs text-purple-600 bg-purple-50 px-3 py-2 rounded-full">
+                            <strong>Risco:</strong> Médio | <strong>Duração:</strong> 2-3 semanas
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="group text-center">
+                        <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="rocket" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#fc8f26] mb-3">4. Produção</h3>
+                        <p class="text-sm text-white mb-4">Deploy com monitoramento, logs e limites de custo definidos.</p>
+                        <div class="text-xs text-green-600 bg-green-50 px-3 py-2 rounded-full">
+                            <strong>Risco:</strong> Baixo | <strong>Duração:</strong> 2-4 semanas
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="group text-center">
+                        <div class="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#fc8f26] mb-3">5. Evolução</h3>
+                        <p class="text-sm text-white mb-4">Retraining contínuo e novas integrações conforme necessário.</p>
+                        <div class="text-xs text-indigo-600 bg-indigo-50 px-3 py-2 rounded-full">
+                            <strong>Risco:</strong> Baixo | <strong>Duração:</strong> Contínuo
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <div class="bg-gray-50 rounded-2xl p-8 max-w-4xl mx-auto">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Garantias do Processo</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                <span class="text-sm text-gray-700">ROI mensurável em até 3 meses</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                <span class="text-sm text-gray-700">Código e modelos documentados</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                <span class="text-sm text-gray-700">Suporte técnico incluso</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 lg:py-24 bg-[#0e0918]">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-[#fe681b] text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                        O que nossos clientes dizem
+                    </h2>
+                    <p class="section-subtitle text-lg md:text-xl text-white max-w-3xl mx-auto">
+                        Resultados reais de empresas que transformaram seus processos com nossas soluções de IA.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="flex text-yellow-400">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 mb-6 leading-relaxed">
+                            "O chatbot reduziu nosso tempo de atendimento em 60% e liberou nossa equipe para focar em casos mais complexos. ROI em menos de 2 meses."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">MC</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Maria Costa</div>
+                                <div class="text-sm text-gray-600">Gerente de Atendimento, TechStore</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="flex text-yellow-400">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 mb-6 leading-relaxed">
+                            "A automação de OCR eliminou 90% dos erros de digitação. Processo que levava horas agora é feito em minutos."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">RS</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Roberto Silva</div>
+                                <div class="text-sm text-gray-600">Diretor Financeiro, MetalTech</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="flex text-yellow-400">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 mb-6 leading-relaxed">
+                            "As previsões de demanda nos ajudaram a reduzir estoque parado em 25% e aumentar vendas em 15%. Impressionante!"
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">AL</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Ana Lima</div>
+                                <div class="text-sm text-gray-600">CEO, FashionPlus</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 lg:py-24">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl text-[#fe681b] md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                        Sobre Nós
+                    </h2>
+                    <p class="section-subtitle text-lg md:text-xl text-white max-w-3xl mx-auto">
+                        Especialistas em IA dedicados a resolver problemas reais com tecnologia de ponta.
+                    </p>
+                </div>
+
+                <!-- Mission -->
+                <div class="bg-gray-50 rounded-2xl p-8 lg:p-12 mb-16">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Nossa Missão</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Democratizar o acesso à Inteligência Artificial, transformando processos complexos em soluções simples e eficazes. 
+                            Acreditamos que a IA deve resolver problemas reais, gerar valor mensurável e ser acessível para empresas de todos os tamanhos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Values -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="lightbulb" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#fe681b] mb-4">Clareza</h3>
+                        <p class="text-white">
+                            Explicamos tecnologia complexa de forma simples. Sem jargões, sem promessas vazias. 
+                            Apenas resultados claros e mensuráveis.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#fe681b] mb-4">Segurança</h3>
+                        <p class="text-white">
+                            Seus dados são sagrados. Implementamos as melhores práticas de segurança e 
+                            privacidade em todas as nossas soluções.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="target" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#fe681b] mb-4">Impacto</h3>
+                        <p class="text-white">
+                            Focamos em resultados que importam: redução de custos, aumento de eficiência 
+                            e crescimento sustentável do seu negócio.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team -->
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-bold text-[#fe681b] mb-8">Nosso Time</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <img class="perfil" src="/assets/kaique.jpeg">
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Kaique Alves</h4>
+                        <p class="text-white font-medium mb-3"><a href="https://github.com/kaiquedev027">GitHub</a></p>
+                        <p class="text-blue-600 font-medium mb-3"><a href="https://www.linkedin.com/in/kaique-alves-fernandes-27656b207/">LinkedIn</a></p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <img class="perfil" src="/assets/joao.png">
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">João Leal</h4>
+                        <p class="text-white font-medium mb-3"><a href="https://github.com/joaolealdev">GitHub</a></p>
+                        <p class="text-blue-600 font-medium mb-3"><a href="https://www.linkedin.com/in/joao-leal1/">LinkedIn</a></p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <img class="perfil" src="/assets/wuender.png">
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Wuender Bueno</h4>
+                        <p class="text-white font-medium mb-3"><a href="https://github.com/WuenderVoidrel">GitHub</a></p>
+                        <p class="text-blue-600 font-medium mb-3"><a href="https://www.linkedin.com/in/wuender-martins-450b41385/">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 lg:py-24 bg-[#0e0918]">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-[#fe681b] text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                        Vamos Conversar
+                    </h2>
+                    <p class="section-subtitle text-lg md:text-xl text-white max-w-3xl mx-auto">
+                        Pronto para transformar seus processos com IA? Entre em contato e receba um diagnóstico gratuito.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Solicitar Diagnóstico</h3>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Nome Completo *
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required
+                                    aria-label="Nome completo"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-300"
+                                    placeholder="Seu nome completo"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                    E-mail *
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    aria-label="Endereço de e-mail"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-300"
+                                    placeholder="seu@email.com"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Empresa
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="company" 
+                                    name="company"
+                                    aria-label="Nome da empresa"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-300"
+                                    placeholder="Nome da sua empresa"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Mensagem *
+                                </label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="4" 
+                                    required
+                                    aria-label="Mensagem"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-300"
+                                    placeholder="Conte-nos sobre seu desafio ou processo que gostaria de automatizar..."
+                                ></textarea>
+                            </div>
+
+                            <button 
+                                type="submit" 
+                                class="w-full bg-gradient-to-r from-[#fe681b] to-[#ff1703] text-white font-medium py-4 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center"
+                            >
+                                <span id="submit-text">Enviar Mensagem</span>
+                                <i data-lucide="send" class="ml-2 w-4 h-4"></i>
+                            </button>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="success-message" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3"></i>
+                                <p class="text-green-700">Mensagem enviada com sucesso! Entraremos em contato em breve.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-6">Outras formas de contato</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-white mb-1">E-mail</h4>
+                                        <a href="mailto:contato@iaautomacao.com" class="text-orange-600 hover:text-orange-700 transition-colors duration-300">
+                                            machineflowia@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+                        <div class="bg-white rounded-2xl p-8 shadow-lg">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Resposta Rápida</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                    <span class="text-sm text-gray-700">Resposta em até 2 horas úteis</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                    <span class="text-sm text-gray-700">Diagnóstico gratuito incluído</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                    <span class="text-sm text-gray-700">Sem compromisso inicial</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CTA Final Section -->
+    <section class="py-16 lg:py-24 bg-[#0e0918]">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Pronto para automatizar seus processos?
+                </h2>
+                <p class="text-xl text-orange-100 mb-8 leading-relaxed">
+                    Receba um diagnóstico gratuito e descubra como a IA pode transformar seu negócio em semanas, não meses.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="inline-flex items-center justify-center bg-gradient-to-r from-[#fe681b] to-[#ff1703] text-white font-medium py-4 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]">
+                        Solicitar Diagnóstico Gratuito
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                    
+                    <div class="flex items-center text-orange-100">
+                        <i data-lucide="clock" class="w-5 h-5 mr-2"></i>
+                        <span class="text-sm">Resposta em até 2 horas</span>
+                    </div>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-white mb-2">Implementação Rápida</h3>
+                        <p class="text-orange-100 text-sm">PoC em 2-3 semanas</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-centesr mb-4">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-white mb-2">ROI Garantido</h3>
+                        <p class="text-orange-100 text-sm">Resultados em até 3 meses</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="users" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-white mb-2">Suporte Completo</h3>
+                        <p class="text-orange-100 text-sm">Acompanhamento contínuo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0e0918] text-white py-12">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="./assets/logo.png" alt="IA & Automação Logo" class="h-8 mr-3 filter invert">
+                        <span class="text-xl font-bold">IA & Automação</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Especialistas em Inteligência Artificial e automação de processos. 
+                        Transformamos desafios complexos em soluções simples e eficazes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:machineflowia@gmail.com" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-300">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Links Rápidos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors duration-300">Serviços</a></li>
+                        <li><a href="#cases" class="text-gray-400 hover:text-white transition-colors duration-300">Casos de Sucesso</a></li>
+                        <li><a href="#process" class="text-gray-400 hover:text-white transition-colors duration-300">Nosso Processo</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">Sobre Nós</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contato</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="w-4 h-4 mr-3 text-orange-500"></i>
+                            <a href="mailto:machineflowia@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                machineflowia@gmail.com
+                            </a>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="clock" class="w-4 h-4 mr-3 text-orange-500"></i>
+                            <span class="text-gray-400">Resposta em 2h úteis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-3 text-orange-500"></i>
+                            <span class="text-gray-400">Diagnóstico gratuito</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 MachineFlowIA. Todos os direitos reservados. 
+                    <span class="mx-2">|</span>
+                    <a href="#" class="hover:text-white transition-colors duration-300">Política de Privacidade</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="hover:text-white transition-colors duration-300">Termos de Uso</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
